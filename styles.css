@@ -43,3 +43,41 @@ body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantare
   .hero{grid-template-columns:1fr}
   .hero__photo{width:160px;height:160px}
 }
+/* --- Bio in pictures gallery --- */
+.gallery h3 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+.photos-grid {
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.photos-grid figure {
+  margin: 0;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.photos-grid img {
+  display: block;
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.photos-grid figcaption {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 520px) {
+  .photos-grid img { height: 200px; }
+}
+
